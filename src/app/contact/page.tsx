@@ -2,7 +2,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { useState } from 'react'
-const page = () => {
+const Page = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
@@ -26,13 +26,13 @@ const page = () => {
       <Link href="/about">about</Link>
 
       <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="Name" />
-        <input type="email" placeholder="Email" />
-        <textarea placeholder="Message"></textarea>
+        <input type="text" onChange={(e) => setName(e.target.value)} placeholder="Name" />
+        <input type="email" onChange={(e) => setEmail(e.target.value)} placeholder="Email" />
+        <textarea onChange={(e)=>setMessage(e.target.value)} placeholder="Message"></textarea>
         <button type="submit">Submit</button>
       </form>
     </div>
   )
 }
 
-export default page
+export default Page;
