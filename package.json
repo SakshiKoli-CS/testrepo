@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@contentstack/cli": "^1.37.0",
     "next": "15.2.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
